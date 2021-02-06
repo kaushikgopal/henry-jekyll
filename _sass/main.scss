@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+//region Variables
+
+$font-family-base: "ff-tisa-web-pro", "IBM Plex Serif", Georgia, "Times New Roman", serif;
+$header-font-family: "ibm-plex-sans", "IBM Plex Sans", sans-serif;
+$header-2-font-family: "ibm-plex-serif", "IBM Plex Serif", "ff-tisa-web-pro", Georgia, "Times New Roman", serif;
+$fixed-width-font-family: 'ibm-plex-mono', "IBM Plex Mono", 'SF Mono', 'Consolas', monospace;
+
+$font-size-regular:   20px;
+
+$font-size-xlarge:   $font-size-regular * 2;
+$font-size-large:   $font-size-regular * 1.5;
+//regular
+$font-size-medium:  $font-size-regular * 0.875;
+$font-size-small:  $font-size-regular * 0.75;
+
+$base-line-height: 1.4;
+
+$spacing-unit:          30px;
+$spacing-micro-unit:    6px;
+
+$mobile-width:  375px;
+$tablet-width:  685px;
+$screen-width:  780px;
+
+//endregion
+
+//region Mixins
+
+@mixin media-query-small-screen() {
+    @media only screen and (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin media-query-laptop() {
+    @media only screen and (min-width: $tablet-width + 1px) {
+        @content;
+    }
+}
+
+// Using media queries with like this:
+// @include media-query-mobile() {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+
+//endregion
+
+@import "theme";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import url(code-colorful.css),
+"base",
+"layout";

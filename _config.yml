@@ -9,6 +9,7 @@ exclude:
   - docker-compose-publish.yml
   - docker-compose.yml
   - firebase.json
+  - .idea/
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules
@@ -16,7 +17,6 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
 
 plugins:
   - jekyll-feed

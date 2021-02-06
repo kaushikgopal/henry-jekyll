@@ -1,0 +1,42 @@
+//region Theme Colors
+
+//region Light theme
+/*
+
+$background-color:  #f2f3f8;
+
+$color-text:        #444;
+$color-text2:       #000;
+$color-textunderline:  #7c7c7c;
+$color-code:        #975f14;
+
+$color-link:        #D7675D;    // ck orange
+$color-link2:       #B10088;    // purple dark
+
+$color-header-index:      $color-link;
+$color-header:      $color-text;
+
+$color-divider:     $color-text;
+*/
+//endregion
+
+//region Dark theme
+
+$background-color:  #3E4244;
+
+$color-text:        #bbb;
+$color-text2:       whitesmoke;
+$color-textunderline: #797979;
+$color-code:        #e3d1b9;
+
+$color-link2:       $color-text2;
+$color-link:        #D7675D;       // ck orange : used in most hovers
+
+$color-header-index:    lighten($background-color, 10%);
+$color-header:          lighten($background-color, 60%);
+
+$color-divider:     $color-textunderline;
+
+//endregion
+
+//endregion
