@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+
+  jekyll:
+    image: jklgg/jblog:1.0
+    command: >
+      sh -c "bundle exec jekyll serve --drafts --watch --force_polling --incremental --livereload"
+    ports:
+      - '4000:4000'
+      - '35729:35729'
+    volumes:
+      - "$PWD:/srv/jekyll"
+
+  # publish:
+  #   image: jklgg/jblog:1.0
+  #   command: >
+  #     sh -c "rm -rf _site &&
+  #           bundle exec jekyll build &&
+  #           rm -rf .firebase &&
+  #               /usr/local/bin/firebase deploy \
+  #                               --non-interactive \
+  #                               --only hosting \
+  #                               --token=$FIREBASE_TOKEN"
+  #   volumes:
+  #     - "$PWD:/srv/jekyll"
+
+# run this script like so:
+
+# docker-compose up --remove-orphans
+# or 
+# docker-compose run jekyll
+
+
+# docker-compose run publish
