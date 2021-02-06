@@ -1,0 +1,24 @@
+---
+layout: default
+permalink: /tags/
+title: Tags
+---
+
+<div class="post-index">
+    {% for tag in site.tags %}
+    {% capture tag_name %}{{ tag | first }}{% endcapture %}
+
+    <h2 class="post-list-header post-list-category" id="{{ tag_name }}">#{{tag_name}}</h2>
+
+    <ul class="post-list-content">
+        {% for post in site.tags[tag_name] %}
+        <li class="post-link">
+            <a class="post-link-url" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            {% if post.external_url %}<a class="linklog" href="{{ post.external_url }}"> ↗</a>{% endif %}
+            <p class="post-link-date">{{ post.date | date: "%m/%-d" }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</div>
+</div>
