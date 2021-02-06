@@ -1,0 +1,60 @@
+<div class="post-meta">
+    {% if page.external_url %}<div class="post-permalink"><a href="{{ page.url }}">Permalink</a></div>{% endif %}
+
+    <div class="post-date">{{ page.date | date: "%b %Y" }}</div>
+
+    {% comment %} {% show category tags  %} {% endcomment %}
+
+    {% unless page.categories == empty %}
+    <div class="post-categories">
+    {% for category in page.categories %}
+      <div class="post-category"><a href="/categories#{{ category }}">{{ category }}</a></div>
+    {% endfor %}
+    </div>
+    {% endunless %}
+
+
+    {% comment %} {% Related posts (from tags)  %} {% endcomment %}
+
+    {% unless page.tags == empty %}
+    {% assign related_post_header_displayed = false %}
+    {% assign exclude_post_urls = page.url | split: ',' %}
+
+    {% for tag in page.tags %}
+        {% for other_post in site.posts %}
+
+        {% if page.id == other_post.id %}
+            {% continue %}
+        {% endif %}
+
+        {% assign other_post_tags = other_post.tags | join: '~~~' | downcase | split: '~~~' %}
+        {% assign tag_lc = tag | downcase %}
+        {% if other_post_tags contains tag_lc %}
+
+                {% if related_post_header_displayed != true %}
+                    <div class="post-related">
+                        <h4> Related: </h4>
+                        <ul class="post-related-links">
+                        {% assign related_post_header_displayed = true %}
+                {% endif %}
+
+                        {% unless exclude_post_urls contains other_post.url %}
+                            <li><a href="{{ site.baseurl }}{{ other_post.url }}">{{ other_post.title }}</a></li>
+                            {% assign dummy_array = other_post.url | split:',' %}
+                            {% assign exclude_post_urls = exclude_post_urls | concat: dummy_array %}
+                        {% endunless %}
+
+        {% endif %}
+
+        {% endfor %}
+
+        {% if forloop.last == true and related_post_header_displayed == true %}
+                        </ul>
+                    </div>
+        {% endif %}
+
+
+    {% endfor %}
+
+    {% endunless %}
+</div>
