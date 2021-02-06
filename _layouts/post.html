@@ -6,7 +6,7 @@ layout: default
     <header class="post-header">
         <h1 class="post-title">
             {% if page.external_url %}
-            <a href="{{ page.external_url }}" class='article-link'>{{ page.title }} ⬏</a>
+            <a href="{{ page.external_url }}" class='article-link'>{{ page.title }}{{ site.external-url-indicator }}</a>
             {% else %}
             {{ page.title }}
             {% endif %}
@@ -14,7 +14,9 @@ layout: default
         </h1>
 
         <h4 class="post-author">
-            {% if page.author %} {{page.author}} {% else %} Kaushik Gopal {% endif %}
+            {% if page.author %} {{page.author}} {% else %}
+            {% if site.author.name %} {{site.author.name}} {% else %} Kaushik Gopal{% endif %}
+            {% endif %}
         </h4>
 
     </header>

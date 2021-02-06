@@ -1,6 +1,18 @@
 # Docker for OSX uses a VM so we need 0.0.0.0 instead of 127.0.0.1
 host: 0.0.0.0
 
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Kaushik Gopal's Blog
+author:
+  name: "Kaushik Gopal"
+  twitter: kaushikgopal
+  bio-url: "https://jkl.gg"
+
+external-url-indicator: " ⬏"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
