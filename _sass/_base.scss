@@ -6,7 +6,6 @@ p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
-    // -webkit-font-smoothing: antialiased;
 }
 
 
@@ -21,11 +20,6 @@ body {
     color: $color-text;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
-
-    strong {
-        // letter-spacing: -1px;
-        // Varela Round looks ghastly when bold
-    }
 }
 
 /**
@@ -79,7 +73,7 @@ ul, ol {
 li {
     > ul,
     > ol {
-         margin-bottom: 0;
+        margin-bottom: 0;
     }
 }
 
