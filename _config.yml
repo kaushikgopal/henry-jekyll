@@ -1,0 +1,25 @@
+# Docker for OSX uses a VM so we need 0.0.0.0 instead of 127.0.0.1
+host: 0.0.0.0
+
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - docker-compose-publish.yml
+  - docker-compose.yml
+  - firebase.json
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
