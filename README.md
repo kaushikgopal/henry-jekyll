@@ -1,11 +1,14 @@
-# henry-jekyll
+# Henry
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+Henry is a [Jekyll](https://jekyllrb.com/) theme with a gorgeous reading experience and packed with features. 
+
+To find out more about all the features, check this intro [blog post](https://blog.jkl.gg/henry-jekyll-theme/).
+
+By simply adding henry to your jekyll blog setup, you can now use all the same features there! 
+
+In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
 
 To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
-
 
 ## Installation
 
@@ -31,20 +34,52 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+## How to override styles
+
+The theme should all just work but if you want to add a little flair and differentiate yourself from other sites/blogs you can do so by adding a few overrides `.scss` files to your `_sass/` directory:
+
+1. `./assets/css/style.scss`
+2. `./assets/theme_override.scss`
+3. `./assets/main_override.scss`
+
+Henry by default loads `_initialize.scss`, so we'll need to override that file like so: 
+
+```scss
+// inside ./assets/css/style.scss
+@import "theme", "theme_override";
+@import "mixins", "code", "base";
+@import "main", "main_override";
+```
+
+You can now override Henry's style by updating two of those override files.
+
+```scss
+// inside ./_sass/theme_override.scss
+// change font sizes, styles, colors in here
+
+$font-size-regular:     30px;
+$background-color:      black;
+$color-text:            red;
+
+// take a look at the main `theme.scss` file to see the full list of variables you can customize
+```
+
+To actually change specific styles, make sure to put them in the main override. The order of imports matter.
+
+```scss
+// inside ./_sass/main.scss
+// change layout or site styles here
+
+ul.post-list-content .post-link a.post-link-url {
+    color: red
+}
+
+// take a look at the main `main.scss` file to see the current layout styles
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `henry-jekyll.gemspec` accordingly.
+Bug reports and pull requests are welcome on [GitHub](https://github.com/kaushikgopal/henry-jekyll). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
