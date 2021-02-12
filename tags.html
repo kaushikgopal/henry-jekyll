@@ -4,7 +4,7 @@ permalink: /tags/
 title: Tags
 ---
 
-<div class="post-index tags">
+<section class="post-index tags">
     {% for tag in site.tags %}
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
 
@@ -20,5 +20,4 @@ title: Tags
         {% endfor %}
     </ul>
     {% endfor %}
-</div>
-</div>
+</section>
