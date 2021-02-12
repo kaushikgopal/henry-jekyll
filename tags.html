@@ -14,7 +14,7 @@ title: Tags
         {% for post in site.tags[tag_name] %}
         <li class="post-link">
             <a class="post-link-url" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            {% if post.external_url %}<a class="linklog" href="{{ post.external_url }}"> ↗</a>{% endif %}
+            {% if post.external_url %}<a class="linklog" href="{{ post.external_url }}">{{ site.external-url-indicator }}</a>{% endif %}
             <p class="post-link-date">{{ post.date | date: "%m/%-d" }}</p>
         </li>
         {% endfor %}

@@ -155,8 +155,9 @@
     }
 
     .linklog {
-        text-decoration: none;
         color: $color-link;
+        font-family: $fixed-width-font-family;
+        text-decoration: none;
 
         &:hover {
             color: $color-text;
