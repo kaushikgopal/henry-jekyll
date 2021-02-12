@@ -1,17 +1,17 @@
 ---
 layout: default
-permalink: /categories/
-title: Categories
+permalink: /tags/
+title: Tags
 ---
 
-<section class="post-index categories">
-    {% for category in site.categories %}
-    {% capture category_name %}{{ category | first }}{% endcapture %}
+<div class="post-index tags">
+    {% for tag in site.tags %}
+    {% capture tag_name %}{{ tag | first }}{% endcapture %}
 
-    <h2 class="post-list-header post-list-category" id="{{ category_name }}">#{{category_name}}</h2>
+    <h2 class="post-list-header post-list-category" id="{{ tag_name }}">#{{tag_name}}</h2>
 
     <ul class="post-list-content">
-        {% for post in site.categories[category_name] %}
+        {% for post in site.tags[tag_name] %}
         <li class="post-link">
             <a class="post-link-url" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             {% if post.external_url %}<a class="linklog" href="{{ post.external_url }}">{{ site.external-url-indicator }}</a>{% endif %}
@@ -20,5 +20,5 @@ title: Categories
         {% endfor %}
     </ul>
     {% endfor %}
-</section>
+</div>
 </div>
