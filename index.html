@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="post-index">
+<section class="post-index">
     {% for post in site.posts  %}
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
@@ -10,7 +10,7 @@ layout: default
     {% if forloop.first %}
     <h2 class="post-list-header" id="{{ this_year }}-ref">{{this_year}}</h2>
     <ul class="post-list-content">
-        {% endif %}
+    {% endif %}
         <li class="post-link">
             <a class="post-link-url" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             {% if post.external_url %}<a class="linklog" href="{{ post.external_url }}"> ⬏</a>{% endif %}
@@ -18,16 +18,16 @@ layout: default
             {% if post.draft %} <span class="draft">Draft</span> {% endif %}
         </li>
 
-        {% if forloop.last %}
+    {% if forloop.last %}
     </ul>
     {% else %}
-    {% if this_year != next_year %}
+        {% if this_year != next_year %}
     </ul>
 
     <h2 class="post-list-header" id="{{ next_year }}-ref">{{next_year}}</h2>
 
     <ul class="post-list-content">
         {% endif %}
-        {% endif %}
-        {% endfor %}
-</div>
+    {% endif %}
+    {% endfor %}
+</section>

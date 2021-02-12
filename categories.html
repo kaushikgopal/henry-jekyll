@@ -4,7 +4,7 @@ permalink: /categories/
 title: Categories
 ---
 
-<div class="post-index">
+<section class="post-index">
     {% for category in site.categories %}
     {% capture category_name %}{{ category | first }}{% endcapture %}
 
@@ -14,11 +14,11 @@ title: Categories
         {% for post in site.categories[category_name] %}
         <li class="post-link">
             <a class="post-link-url" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            {% if post.external_url %}<a class="linklog" href="{{ post.external_url }}"> ↗</a>{% endif %}
+            {% if post.external_url %}<a class="linklog" href="{{ post.external_url }}">{{ site.external-url-indicator }}</a>{% endif %}
             <p class="post-link-date">{{ post.date | date: "%m/%-d" }}</p>
         </li>
         {% endfor %}
     </ul>
     {% endfor %}
-</div>
+</section>
 </div>
