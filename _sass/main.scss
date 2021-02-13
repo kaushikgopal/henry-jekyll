@@ -500,10 +500,11 @@ article.post-content {
 }
 
 .site-nav {
+
     ul {
         display: grid;
         row-gap: $spacing-unit / 2;
-        grid-template-columns: repeat(auto-fill, minmax((7 * $font-size-regular), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax((7 * $font-size-regular), 1fr));
 
         list-style-type: none;
         margin-left: 0;
@@ -511,7 +512,6 @@ article.post-content {
 
         .nav-link {
             display: block;
-            min-width: 6 * $font-size-regular;
 
             padding-top: $spacing-micro-unit;
             padding-bottom: $spacing-micro-unit;
