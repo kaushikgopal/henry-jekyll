@@ -505,6 +505,9 @@ article.post-content {
         display: grid;
         row-gap: $spacing-unit / 2;
         grid-template-columns: repeat(auto-fit, minmax((7 * $font-size-regular), 1fr));
+        @include media-query-small-screen() {
+            grid-template-columns: repeat(auto-fit, minmax((4 * $font-size-regular), 1fr));
+        }
 
         list-style-type: none;
         margin-left: 0;
@@ -516,6 +519,11 @@ article.post-content {
             padding-top: $spacing-micro-unit;
             padding-bottom: $spacing-micro-unit;
             text-decoration: none;
+
+            @include media-query-small-screen() {
+                font-size: $font-size-small;
+            }
+
 
             border-top: 2px solid transparent;
             border-bottom: 2px solid transparent;
