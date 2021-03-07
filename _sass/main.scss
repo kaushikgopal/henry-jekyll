@@ -529,8 +529,8 @@ article.post-content {
             border-bottom: 2px solid transparent;
 
             &:hover {
-                border-top: 2px solid $color-textunderline;
-                border-bottom: 2px solid $color-textunderline;
+                border-top: 2px solid $color-link;
+                border-bottom: 2px solid $color-link;
             }
         }
     }
