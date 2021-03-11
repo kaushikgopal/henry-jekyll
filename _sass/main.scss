@@ -424,6 +424,13 @@ ul.callout {
     padding: 1em 0;
 }
 
+a.footnote {
+    text-decoration: none;
+    &:hover {
+        color: $color-link;
+    }
+}
+
 /* Code snippets
 ================================================== */
 code {
