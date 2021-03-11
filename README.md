@@ -1,5 +1,7 @@
 # Henry
 
+<p align="center"><img src="assets/img/henry.png"></p>
+
 Henry is a [Jekyll](https://jekyllrb.com/) theme with a gorgeous reading experience and packed with features. 
 
 To find out more about all the features, check this intro [blog post](https://blog.jkl.gg/henry-jekyll-theme/).
