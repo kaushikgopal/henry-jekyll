@@ -10,7 +10,7 @@ services:
       - '4000:4000'
       - '35729:35729'
     volumes:
-      - "$PWD:/srv/jekyll"
+      - "./:/srv/jekyll"
 
   # publish:
   #   image: jklgg/jblog:1.0
@@ -23,7 +23,7 @@ services:
   #                               --only hosting \
   #                               --token=$FIREBASE_TOKEN"
   #   volumes:
-  #     - "$PWD:/srv/jekyll"
+  #     - "./:/srv/jekyll"
 
 # run this script like so:
 
