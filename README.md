@@ -2,22 +2,48 @@
 
 <p align="center"><img src="assets/img/henry.png"></p>
 
-Henry is a [Jekyll](https://jekyllrb.com/) theme with a gorgeous reading experience and packed with features. 
+Henry is a [Jekyll](https://github.com/jekyll/) theme with a gorgeous reading experience, chock-full of features. To find out more about all the features check out this [blog post](https://blog.jkl.gg/henry-jekyll-theme/).
 
-To find out more about all the features, check this intro [blog post](https://blog.jkl.gg/henry-jekyll-theme/).
+## Getting Started
 
-By simply adding henry to your jekyll blog setup, you can now use all the same features there! 
+### Getting started with Docker 
 
-In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+The quickest way to get up and running with a Jekyll blog using Henry is using the included [Docker](https://www.docker.com/) configuration file.
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+If you install [Docker](https://docs.docker.com/get-docker/) the setup becomes incredibly simple.
 
-## Installation
+```shell
 
-Add this line to your Jekyll site's `Gemfile`:
+# 1. clone this blog
+git clone git@github.com:kaushikgopal/henry-jekyll.git my_new_blog
+
+# 2. spin everything up with Docker
+docker-compose up
+
+# 3. There is no Step 3
+```
+
+Spinning up the blog for the very first time with Docker can take a while. But after the first run, subsequent runs are snappy.
+
+Start editing your posts and notice the live preview update in realtime.
+
+### Getting started without Docker 
+
+Henry is a good citizen of the Jekyll theme world. You can add Henry as you would any [regular Jekyll theme](https://stackoverflow.com/a/45905534).
+
+Add the theme to your Jekyll site's `Gemfile`:
 
 ```ruby
 gem "henry-jekyll"
+```
+
+Install the theme:
+
+```shell
+bundle install
+
+# or install manually 
+gem install henry-jekyll
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
@@ -26,34 +52,70 @@ And add this line to your Jekyll site's `_config.yml`:
 theme: henry-jekyll
 ```
 
-And then execute:
+Run Jekyll as you normally would
 
-    $ bundle
+```shell
+bundle exec jekyll serve
+```
 
-Or install it yourself as:
 
-    $ gem install henry-jekyll
+# Customizing your blog with Henry
 
-## Usage
+Henry is intentionally built to be customizable. Here's how you can start customizing Henry to your own liking:
 
-## How to override styles
+## Required files
 
-The theme should all just work but if you want to add a little flair and differentiate yourself from other sites/blogs you can do so by adding a few overrides `.scss` files to your `_sass/` directory:
+You only need two files to get started with Henry:
 
-1. `./assets/css/style.scss`
-2. `./assets/theme_override.scss`
-3. `./assets/main_override.scss`
+1. `_config.yml`
+2. `index.html`
 
-Henry by default loads `_initialize.scss`, so we'll need to override that file like so: 
+Inside your `_config.yml` make sure you have Henry set as your  theme:
+
+```yml
+theme: henry-jekyll
+```
+
+Henry comes with an opinionated index posts layout. If you wish to use the same, all you need to do is add an `index.html` page with the following content:
+
+```html
+---
+layout: index
+---
+```
+
+Take a look at [the `index.html` page in Henry's `_layout` folder](https://github.com/kaushikgopal/henry-jekyll/blob/main/_layouts/index.html) if you want to customize it differently.
+
+### Overriding styles
+
+The theme should all just work but if you want to add flair and differentiate yourself from other sites/blogs, I recommend adding a few overrides `.scss` files:
+
+1. `assets/css/style.scss`
+2. `_sass/override.scss`
+3. `_sass/main_override.scss`
+4. `_sass/theme_override.scss`
+
+First, let's instruct Henry to switch to custom styling. Your `style.scss` file should look like this. 
 
 ```scss
-// inside ./assets/css/style.scss
+---
+---
+// triple - needed by Jekyll to replace main style
+
+@import "override";
+```
+
+We now want to layer in the overrides properly. Similar to the way Henry [initializes this](https://github.com/kaushikgopal/henry-jekyll/blob/main/_sass/_initialize.scss), add an `override.scss` file:
+
+```scss
 @import "theme", "theme_override";
 @import "mixins", "code", "base";
 @import "main", "main_override";
 ```
 
-You can now override Henry's style by updating two of those override files.
+The only two files you now need to worry about are the `_override` files. The other ones are picked up internally.
+
+The `theme_override` file is where you can modify a bunch of variables like font sizes, styles, colors etc.
 
 ```scss
 // inside ./_sass/theme_override.scss
@@ -66,7 +128,7 @@ $color-text:            red;
 // take a look at the main `theme.scss` file to see the full list of variables you can customize
 ```
 
-To actually change specific styles, make sure to put them in the main override. The order of imports matter.
+To change specific "styles" in your page, use the `main_override.scss` file:
 
 ```scss
 // inside ./_sass/main.scss
@@ -82,6 +144,15 @@ ul.post-list-content .post-link a.post-link-url {
 ## Contributing
 
 Bug reports and pull requests are welcome on [GitHub](https://github.com/kaushikgopal/henry-jekyll). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+To get started check out the [DEVELOPMENT](https://github.com/kaushikgopal/henry-jekyll/blob/main/DEVELOPMENT.md) page.
+
+## Henry in the Wild
+
+Here are a couple of blogs that use Henry:
+
+1. [Karthick Gopal's blog](https://blog.karthickg.com)
+2. [Kaushik Gopal's blog](https://blog.jkl.gg)
 
 ## License
 
