@@ -22,6 +22,7 @@ permalink: /:title/
 markdown: kramdown
 highlighter: rouge
 encoding: utf-8
+theme: henry-jekyll
 
 # front matter defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
