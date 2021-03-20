@@ -46,7 +46,7 @@ bundle install
 gem install henry-jekyll
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+Now add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
 theme: henry-jekyll
@@ -92,8 +92,8 @@ The theme should all just work but if you want to add flair and differentiate yo
 
 1. `assets/css/style.scss`
 2. `_sass/override.scss`
-3. `_sass/main_override.scss`
-4. `_sass/theme_override.scss`
+3. `_sass/theme_override.scss`
+4. `_sass/main_override.scss`
 
 First, let's instruct Henry to switch to custom styling. Your `style.scss` file should look like this. 
 
