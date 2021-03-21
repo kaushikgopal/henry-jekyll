@@ -1,6 +1,14 @@
 #!/bin/sh
 
 
+# This Henry repo has the source for the actual theme
+# If you want to contribute or develop Henry
+# then cloning this repo and working on it makes sense.
+
+# If you just want to start a blog that _uses_ Henry
+# This cleanup script only keeps the relevant portions you need
+
+
 YELLOW='\033[1;33m'
 PURPLE='\033[1;35m'
 GRAY='\033[1;30m'
