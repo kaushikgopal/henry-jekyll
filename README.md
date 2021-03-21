@@ -104,7 +104,6 @@ First, let's instruct Henry to switch to custom styling. Your `style.scss` file 
 @import "initialize";
 ```
 
-
 We now want to layer in the overrides properly. Copy over the [`initialize.scss`](https://github.com/kaushikgopal/henry-jekyll/blob/main/_sass/_initialize.scss) file for the Henry repo:
 
 ```scss
@@ -156,9 +155,9 @@ Take a look at [the `index.html` page in Henry's `_layout` folder](https://githu
 
 ### Step 5: spin blog up using docker
 
-Similar to the last step in the previous process, use Docker and spin your blog up now!
+Similar to [the last step](https://github.com/kaushikgopal/henry-jekyll#step-3-spin-blog-up-using-docker) in the previous process, use Docker and spin your blog up now!
 
-### Setup blog without Docker 
+### Setup blog (without Docker)
 
 Henry is a good citizen of the Jekyll theme world. You can add Henry as you would any [regular Jekyll theme](https://stackoverflow.com/a/45905534).
 
@@ -179,7 +178,7 @@ gem install henry-jekyll
 
 #### Step 3: tweak Jekyll setup to use Henry
 
-Follow Step 4 from the previous process.
+Follow [the same step from the previous process](https://github.com/kaushikgopal/henry-jekyll#step-4-tweak-jekyll-setup-to-use-henry).
 
 #### Step 4: Run Jekyll as you normally would
 
