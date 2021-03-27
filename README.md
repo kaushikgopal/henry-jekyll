@@ -200,6 +200,7 @@ Here are a couple of blogs that use Henry:
 
 1. [Karthick Gopal's blog](https://blog.karthickg.com)
 2. [Kaushik Gopal's blog](https://blog.jkl.gg)
+3. [Nic Finn's blog (GitHub Pages)](https://neodymiumphi.sh)
 
 ## License
 
