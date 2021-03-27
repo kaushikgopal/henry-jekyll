@@ -47,7 +47,7 @@ After you have docker up and running with the right URL, start editing your post
 
 ## Setup existing blog (with Docker)
 
-If you have an existing Jekyll blog but want to change the theme to Henry, that should also be simple. 
+If you have an existing Jekyll blog but want to change the theme to Henry, that should also be simple.
 
 ### Step 1: update your `_config.yml`
 
@@ -94,7 +94,7 @@ You need to add a few files to make sure Henry's style is preserved:
 3. `_sass/theme_override.scss`
 4. `_sass/main_override.scss`
 
-First, let's instruct Henry to switch to custom styling. Your `style.scss` file should look like this. 
+First, let's instruct Henry to switch to custom styling. Your `style.scss` file should look like this.
 
 ```scss
 ---
@@ -112,7 +112,7 @@ We now want to layer in the overrides properly. Copy over the [`initialize.scss`
 @import "main", "main_override";
 ```
 
-> The only two files you now need to worry about are the ones with the `_override` suffix. 
+> The only two files you now need to worry about are the ones with the `_override` suffix.
 
 Everything else is picked up automatically from Henry.
 
@@ -172,7 +172,7 @@ Install the theme:
 ```shell
 bundle install
 
-# or install manually 
+# or install manually
 gem install henry-jekyll
 ```
 
@@ -200,9 +200,8 @@ Here are a couple of blogs that use Henry:
 
 1. [Karthick Gopal's blog](https://blog.karthickg.com)
 2. [Kaushik Gopal's blog](https://blog.jkl.gg)
-3. [Nic Finn's blog (GitHub Pages)](https://neodymiumphi.sh)
+3. [Nic Finn's blog](https://neodymiumphi.sh) _(Github Pages)_
 
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
