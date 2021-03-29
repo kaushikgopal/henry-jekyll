@@ -9,26 +9,6 @@ If you wish to build Henry from source and work on it directly (without the hand
 
 ## Setup
 
-Start by adding a `Gemfile` to the repo
-
-```Gemfile
-source 'https://rubygems.org'
-gemspec
-
-gem "bundler"
-gem "webrick"
-
-gem "jekyll"
-gem "jekyll-paginate", "~> 1.1"
-
-group :jekyll_plugins do
-    gem "jekyll-feed","~> 0.15"
-    gem "jekyll-redirect-from","~> 0.16"
-    gem "jekyll-seo-tag","~> 2.7"
-    gem "jekyll-sitemap", "~> 1.4"
-end
-```
-
 ```shell
 bundle install
 ```
@@ -41,7 +21,9 @@ bundle exec jekyll serve -wIlo --drafts
 
 This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-## Gem
+## Building the Gem
+
+This is only required for updating Henry's version on rubygems.org
 
 ```shell
 trash henry-jekyll-*.gem

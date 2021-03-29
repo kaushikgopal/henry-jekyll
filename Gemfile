@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 gemspec
 
-gem "bundler"
-gem "webrick"
+gem "bundler"  
+gem "webrick" # stopped shipping with Ruby 3.0
 
 gem "jekyll"
 gem "jekyll-paginate", "~> 1.1"
