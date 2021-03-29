@@ -11,6 +11,10 @@ services:
       - '35729:35729'
     volumes:
       - "./:/srv/jekyll"
+      # Gemfiles are only used for local development
+      # this ignores them when using a docker container
+      - "/dev/null:/srv/jekyll/Gemfile.lock"
+      - "/dev/null:/srv/jekyll/Gemfile"
 
   # publish:
   #   image: jklgg/jblog:1.0

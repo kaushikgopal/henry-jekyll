@@ -42,6 +42,11 @@ markdown: kramdown
 highlighter: rouge
 encoding: utf-8
 
+# Jekyll Plugins (only needed for GitHub Pages)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
 # front matter defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
   - scope:
@@ -59,12 +64,17 @@ defaults:
 # their entries' file path in the `include:` list.
 
 exclude:
-  - docker-compose-publish.yml
-  - docker-compose.yml
-  - firebase.json
-  - .idea/
-#   - Gemfile
-#   - Gemfile.lock
+ - .idea/
+ - DEVELOPMENT.md
+ - Gemfile
+ - Gemfile.lock
+ - README.md
+ - docker-compose-publish.yml
+ - docker-compose.yml
+ - firebase.json
+ - henry-jekyll.gemspec
+ - publishing_firebase_hosting.md
+ - publishing_github_pages.md
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/

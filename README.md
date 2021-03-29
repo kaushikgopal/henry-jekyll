@@ -6,6 +6,8 @@ Henry is a [Jekyll](https://github.com/jekyll/) theme with a gorgeous reading ex
 
 # Getting Started
 
+# Setup guide
+
 The quickest way to get up and running with a Jekyll blog using Henry is using the included [Docker](https://www.docker.com/) configuration file.
 
 ## Setup new blog (with Docker)
@@ -47,7 +49,7 @@ After you have docker up and running with the right URL, start editing your post
 
 ## Setup existing blog (with Docker)
 
-If you have an existing Jekyll blog but want to change the theme to Henry, that should also be simple. 
+If you have an existing Jekyll blog but want to change the theme to Henry, that should also be simple.
 
 ### Step 1: update your `_config.yml`
 
@@ -94,7 +96,7 @@ You need to add a few files to make sure Henry's style is preserved:
 3. `_sass/theme_override.scss`
 4. `_sass/main_override.scss`
 
-First, let's instruct Henry to switch to custom styling. Your `style.scss` file should look like this. 
+First, let's instruct Henry to switch to custom styling. Your `style.scss` file should look like this.
 
 ```scss
 ---
@@ -112,7 +114,7 @@ We now want to layer in the overrides properly. Copy over the [`initialize.scss`
 @import "main", "main_override";
 ```
 
-> The only two files you now need to worry about are the ones with the `_override` suffix. 
+> The only two files you now need to worry about are the ones with the `_override` suffix.
 
 Everything else is picked up automatically from Henry.
 
@@ -172,7 +174,7 @@ Install the theme:
 ```shell
 bundle install
 
-# or install manually 
+# or install manually
 gem install henry-jekyll
 ```
 
@@ -188,21 +190,30 @@ bundle exec jekyll serve
 
 Your blog should be up and running!
 
-## Contributing
+# Publishing guide
+
+## Github Pages
+
+If you wish to publish your blog using [Github Pages](https://pages.github.com) (a popular free hosting option) you can follow this [setup guide](./publishing_github_pages.md).
+
+## Firebase Hosting (included with Docker container)
+
+Another good option to publish your blog is [Firebase hosting](https://firebase.google.com/docs/hosting). It includes a pretty generous free plan and allows plenty of customizability. The included Docker container comes prebuilt with firebase tools installed. This makes it a breeze to setup publishing. Here's a [setup guide](./publishing_firebase_hosting.md).
+
+# Contributing
 
 Bug reports and pull requests are welcome on [GitHub](https://github.com/kaushikgopal/henry-jekyll). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 To get started check out the [DEVELOPMENT](https://github.com/kaushikgopal/henry-jekyll/blob/main/DEVELOPMENT.md) page.
 
-## Henry in the Wild
+# Henry in the Wild
 
 Here are a couple of blogs that use Henry:
 
 1. [Karthick Gopal's blog](https://blog.karthickg.com)
 2. [Kaushik Gopal's blog](https://blog.jkl.gg)
-3. [Nic Finn's blog (GitHub Pages)](https://neodymiumphi.sh)
+3. [Nic Finn's blog](https://neodymiumphi.sh) _(Github Pages)_
 
-## License
+# License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
