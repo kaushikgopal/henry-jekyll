@@ -21,8 +21,6 @@ host: 0.0.0.0
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-# Minor modifications made in order to support GitHub Pages
-
 title: Kaushik's new blog
 author:
   name: "Kaushik Gopal"
@@ -44,11 +42,10 @@ markdown: kramdown
 highlighter: rouge
 encoding: utf-8
 
-# Jekyll Plugins Necessary for GitHub Pages
+# Jekyll Plugins (only needed for GitHub Pages)
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-
 
 # front matter defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
@@ -67,14 +64,17 @@ defaults:
 # their entries' file path in the `include:` list.
 
 exclude:
+ - .idea/
+ - DEVELOPMENT.md
+ - Gemfile
+ - Gemfile.lock
+ - README.md
  - docker-compose-publish.yml
  - docker-compose.yml
  - firebase.json
- - .idea/
- - Gemfile
- - Gemfile.lock
  - henry-jekyll.gemspec
- - GitHub_Pages_Setup.md
+ - publishing_firebase_hosting.md
+ - publishing_github_pages.md
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/

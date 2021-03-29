@@ -6,6 +6,8 @@ Henry is a [Jekyll](https://github.com/jekyll/) theme with a gorgeous reading ex
 
 # Getting Started
 
+# Setup guide
+
 The quickest way to get up and running with a Jekyll blog using Henry is using the included [Docker](https://www.docker.com/) configuration file.
 
 ## Setup new blog (with Docker)
@@ -188,13 +190,23 @@ bundle exec jekyll serve
 
 Your blog should be up and running!
 
-## Contributing
+# Publishing guide
+
+## Github Pages
+
+If you wish to publish your blog using [Github Pages](https://pages.github.com) (a popular free hosting option) you can follow this [setup guide](./publishing_github_pages.md).
+
+## Firebase Hosting (included with Docker container)
+
+Another good option to publish your blog is [Firebase hosting](https://firebase.google.com/docs/hosting). It includes a pretty generous free plan and allows plenty of customizability. The included Docker container comes prebuilt with firebase tools installed. This makes it a breeze to setup publishing. Here's a [setup guide](./publishing_firebase_hosting.md).
+
+# Contributing
 
 Bug reports and pull requests are welcome on [GitHub](https://github.com/kaushikgopal/henry-jekyll). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 To get started check out the [DEVELOPMENT](https://github.com/kaushikgopal/henry-jekyll/blob/main/DEVELOPMENT.md) page.
 
-## Henry in the Wild
+# Henry in the Wild
 
 Here are a couple of blogs that use Henry:
 
@@ -202,6 +214,6 @@ Here are a couple of blogs that use Henry:
 2. [Kaushik Gopal's blog](https://blog.jkl.gg)
 3. [Nic Finn's blog](https://neodymiumphi.sh) _(Github Pages)_
 
-## License
+# License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
