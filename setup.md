@@ -5,11 +5,10 @@ The quickest way to get up and running with a Jekyll blog using Henry is using t
 
 ##### Table of content
 
-[Setup *new* blog with **Docker**]()
-[Setup *existing* blog with **Docker**]()
-[Setup *new* blog directly]()
-[Setup *existing* blog directly]()
-
+[Setup *new* blog with **Docker**](#setup-new-blog-with-docker)
+[Setup *existing* blog with **Docker**](#setup-existing-blog-with-docker)
+[Setup *new* blog directly](#setup-new-blog-directly)
+[Setup *existing* blog directly](#setup-existing-blog-with-docker)
 
 ## Setup new blog (with Docker)
 
@@ -160,7 +159,8 @@ Take a look at [the `index.html` page in Henry's `_layout` folder](https://githu
 
 Similar to [the last step](https://github.com/kaushikgopal/henry-jekyll#step-3-spin-blog-up-using-docker) in the previous process, use Docker and spin your blog up now!
 
-### Setup blog (without Docker)
+
+## Setup existing blog directly
 
 Henry is a good citizen of the Jekyll theme world. You can add Henry as you would any [regular Jekyll theme](https://stackoverflow.com/a/45905534).
 
@@ -179,11 +179,13 @@ bundle install
 gem install henry-jekyll
 ```
 
-#### Step 3: tweak Jekyll setup to use Henry
+## Setup new blog (with Docker)
+
+### Step 3: tweak Jekyll setup to use Henry
 
 Follow [the same step from the previous process](https://github.com/kaushikgopal/henry-jekyll#step-4-tweak-jekyll-setup-to-use-henry).
 
-#### Step 4: Run Jekyll as you normally would
+###  Step 4: Run Jekyll as you normally would
 
 ```shell
 bundle exec jekyll serve
