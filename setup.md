@@ -1,14 +1,15 @@
 # Setup guide
 
-The quickest way to get up and running with a Jekyll blog using Henry is using the included [Docker](https://www.docker.com/) configuration file.
+The quickest way to get up and running with a Jekyll blog using Henry is using the included [Docker](https://www.docker.com/) configuration file. 
 
+However, this guide shows the different ways you can get up and running with a Jekyll blog & Henry.
 
 ##### Table of content
 
-[Setup *new* blog with **Docker**](#setup-new-blog-with-docker)
-[Setup *existing* blog with **Docker**](#setup-existing-blog-with-docker)
-[Setup *new* blog directly](#setup-new-blog-directly)
-[Setup *existing* blog directly](#setup-existing-blog-with-docker)
+* [Setup *new* blog with **Docker**](#setup-new-blog-with-docker)
+* [Setup *new* blog directly](#setup-new-blog-directly)
+* [Setup *existing* blog with **Docker**](#setup-existing-blog-with-docker)
+* [Setup *existing* blog directly](#setup-existing-blog-with-docker)
 
 ## Setup new blog (with Docker)
 
@@ -47,6 +48,36 @@ http://localhost:4000/
 
 After you have docker up and running with the right URL, start editing your posts and notice the browser reload your changes in realtime.
 
+## Setup new blog directly
+
+If you want to start a new blog from scratch.
+
+### Step 1: clone the henry repo
+
+```shell
+git clone git@github.com:kaushikgopal/henry-jekyll.git my_new_blog
+```
+
+### Step 2: run the cleanup script
+
+Unless you plan on contributing or working on Henry directly you don't need this entire repo. To get started with a new blog, I've added this handy script called `start_new_blog.sh` that morphs the Henry repo to fresh new blog.
+
+```shell
+./start_new_blog.sh
+```
+
+
+### Step 3: Run Jekyll as you normally would
+
+```shell
+bundle exec jekyll server --drafts 
+
+# or my preferred way
+bundle exec jekyll server --drafts --watch --force_polling --incremental --livereload
+```
+
+Your blog should be up and running!
+
 ## Setup existing blog (with Docker)
 
 If you have an existing Jekyll blog but want to change the theme to Henry, that should also be simple.
@@ -66,7 +97,7 @@ Change the theme to Henry:
 theme: henry-jekyll
 ```
 
-For simplicity, you can also just copy the [`_config.yml`](https://github.com/kaushikgopal/henry-jekyll/blob/main/_config.yml) from the Henry repo and update it accordingly.
+_You can also just copy the [`_config.yml`](https://github.com/kaushikgopal/henry-jekyll/blob/main/_config.yml) from the Henry repo and update it accordingly._
 
 ### Step 2: copy the docker config file `docker-compose.yml`
 
@@ -157,12 +188,30 @@ Take a look at [the `index.html` page in Henry's `_layout` folder](https://githu
 
 ### Step 5: spin blog up using docker
 
-Similar to [the last step](https://github.com/kaushikgopal/henry-jekyll#step-3-spin-blog-up-using-docker) in the previous process, use Docker and spin your blog up now!
+Once you install [Docker](https://docs.docker.com/get-docker/) the setup becomes *incredibly* simple. The included Docker config file `docker-compose.yml` takes care of installing the right versions of Jekyll, Ruby and the necessary gems.
 
+```shell
+docker-compose up
+```
+
+When using Docker, spinning it up the first time takes a while (since you have to download the docker container). Subsequent runs are super snappy.
+
+Now run your live local blog!
+
+```shell
+## on a Mac
+http://0.0.0.0:4000/
+## on Windows
+http://localhost:4000/
+```
+
+After you have docker up and running with the right URL, start editing your posts and notice the browser reload your changes in realtime.
 
 ## Setup existing blog directly
 
 Henry is a good citizen of the Jekyll theme world. You can add Henry as you would any [regular Jekyll theme](https://stackoverflow.com/a/45905534).
+
+## Step 1: Install the gem 
 
 Add the theme to your Jekyll site's `Gemfile`:
 
@@ -179,17 +228,17 @@ bundle install
 gem install henry-jekyll
 ```
 
-## Setup new blog (with Docker)
+### Step 2: tweak Jekyll setup to use Henry
 
-### Step 3: tweak Jekyll setup to use Henry
+Follow [the same step as mentioned previously](https://github.com/kaushikgopal/henry-jekyll#step-4-tweak-jekyll-setup-to-use-henry).
 
-Follow [the same step from the previous process](https://github.com/kaushikgopal/henry-jekyll#step-4-tweak-jekyll-setup-to-use-henry).
-
-###  Step 4: Run Jekyll as you normally would
+###  Step 3: Run Jekyll as you normally would
 
 ```shell
-bundle exec jekyll serve
+bundle exec jekyll server --drafts 
+
+# or my preferred way
+bundle exec jekyll server --drafts --watch --force_polling --incremental --livereload
 ```
 
 Your blog should be up and running!
-
