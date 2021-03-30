@@ -36,7 +36,7 @@ If you wish to publish your blog using [Github Pages](https://pages.github.com) 
 
 ## Firebase Hosting (included with Docker container)
 
-Another good option to publish your blog is [Firebase hosting](https://firebase.google.com/docs/hosting). It includes a pretty generous free plan and allows plenty of customizability. The included Docker container comes prebuilt with firebase tools installed. This makes it a breeze to setup publishing. Here's a [setup guide](./publishing_firebase_hosting.md).
+Another good option to publish your blog is [Firebase hosting](https://firebase.google.com/docs/hosting). It includes a pretty generous free plan and allows plenty of customizability. Here's a [setup guide](./publishing_firebase_hosting.md).
 
 # Contributing
 
