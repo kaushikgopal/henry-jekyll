@@ -9,7 +9,7 @@ However, this guide shows the different ways you can get up and running with a J
 * [Setup *new* blog with **Docker**](#setup-new-blog-with-docker)
 * [Setup *new* blog directly](#setup-new-blog-directly)
 * [Setup *existing* blog with **Docker**](#setup-existing-blog-with-docker)
-* [Setup *existing* blog directly](#setup-existing-blog-with-docker)
+* [Setup *existing* blog directly](#setup-existing-blog-directly)
 
 ## Setup new blog (with Docker)
 
