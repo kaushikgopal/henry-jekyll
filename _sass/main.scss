@@ -15,13 +15,21 @@
     }
 }
 
-.post .full-bleed {
-    width: 100vw;
 
+.post .full-bleed {
+    // correct to match exact 100vw
+    width: calc(
+            100vw
+            - 2 * #{$spacing-micro-unit}
+            - 1.5px
+    );
+
+    /*
+    .post-content margin
+    */
     margin-left: calc(
-            (100vw - #{"min(65ch, 100vw)"})
-            * (.2 / 1.2)
-            * (-1)
+            (-1)
+            * (100vw - #{"min(65ch, 100vw)"}) * (.2/1.2)
             - #{$spacing-unit}
     );
 }
