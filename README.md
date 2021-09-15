@@ -2,7 +2,7 @@
 
 <p align="center"><img src="assets/img/henry.png"></p>
 
-Henry is a [Jekyll](https://github.com/jekyll/) theme with a gorgeous reading experience, chock-full of features. To find out more about all the features check out this [blog post](https://blog.jkl.gg/henry-jekyll-theme/).
+Henry is a [Jekyll](https://github.com/jekyll/) theme with a gorgeous reading experience, chock-full of features. To find out more about all the features check out this [blog post](https://jkl.gg/b/henry-jekyll-theme/).
 
 # Getting Started
 
