@@ -51,7 +51,7 @@ Here are a couple of blogs that use Henry:
 1. [Karthick Gopal's blog](https://blog.karthickg.com)
 2. [Kaushik Gopal's blog](https://blog.jkl.gg)
 3. [Nic Finn's blog](https://neodymiumphi.sh) _(Github Pages)_
-4. [Karthik Perla's blog](karthikperla.me) _(Github Pages)_
+4. [Karthik Perla's blog](https://fallinginenigma.github.io) _(Github Pages)_
 
 # License
 
